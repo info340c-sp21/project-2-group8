@@ -1,0 +1,329 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* landing page */
+html {
+    height: 100%;
+}
+
+/* landing page's header */
+.landing {
+    text-align: center;
+    margin-top: 20vh;
+    color: white;
+    text-shadow: 2px 3px #153c43;
+}
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 80px;
+}
+h2 {
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 40px;
+}
+
+/* groups header and button */
+.landing-main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* landing page's button */
+.explore_button {
+    display: block;
+    background-color: rgba(0, 163, 255, 1);
+    color: white;
+    font-family: 'Lobster', cursive;
+    border-radius: 5px;
+    border: 5px solid #E8E8E8;
+    padding: 20px 30px;
+    font-size: 32px;
+    cursor: pointer;
+    box-shadow: 2px 3px #153c43;
+    align-items: center;
+    width: 250px;
+    margin:0 auto;
+    margin-top: 1%;
+}
+
+/* background image for all pages  */
+body{
+    background-image: url("./background2.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* pushes down footer */
+main, .landing-main {
+    flex: 1;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+/* footer section */
+footer{
+    font-family: 'Goudy Bookletter 1911', serif;
+    display: block;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    text-shadow: 0.5px 0.5px #153c43;
+    background-color: rgba(11, 12, 12, 0.6);
+}
+.linkMain{
+    color: rgba(250, 250, 250, 0.8);
+}
+
+/* name and contact  */
+.author {
+    display: none;
+}
+
+/* main page*/
+header{
+    background-color:rgba(0, 163, 255, 0.4);
+    color: white;
+    text-shadow: 1px 2px #153c43;
+}
+header h1 {
+    font-family: 'Lobster', cursive;
+}
+header h2 {
+    display: none;
+}
+.aniweButton{
+    background-color: transparent;
+    border: transparent;
+    color: white;
+}
+
+/* box that contains searchbox and dropdowns */
+.flexbox-search-dropdown{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1%;
+    padding-left: 10%;
+    padding-right: 17%;
+}
+
+/* searchbox and input */
+input{
+    border-radius: 5px;
+    border: 1px solid rgba(0, 163, 255, 1);
+}
+.flexbox-search-dropdown .searchBox button{
+    border-radius: 5px;
+    background-color: rgba(0, 163, 255, 1);
+    color: white;
+    border: solid white 1px;
+}
+.searchButton{
+    max-height: 27px;
+    max-width: 30px;
+}
+.searchBox{
+    margin-top: 2px;
+}
+
+/* boxs buttons */
+.flex-container{
+    display: flex;
+    margin-left: 1%;
+}
+
+/* filter buttons */
+.button-dropdown{
+    padding: 2px 5px;
+    margin: 1px;
+    background-color: rgba(0, 163, 255, 1);
+    color: white;
+    font-family: 'Goudy Bookletter 1911', serif;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-right: 1px;
+    position: relative;
+}
+
+/* button colors  */
+#beginners {
+    background-color: rgb(44, 141, 197);
+}
+#anime_fans {
+    background-color: rgb(18, 97, 136);
+}
+#anime_freaks {
+    background-color: rgb(7, 70, 99);
+}
+
+/* poster image for each anime*/
+img {
+    height: 300px;
+    width: 180px;
+}
+
+/* main page card details */
+.card-title {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+.card-text {
+    font-family: 'Goudy Bookletter 1911', serif;
+    margin-top: 0;
+    font-size: 20px; 
+    padding-right: 60px;
+}
+
+
+
+/* see more button */
+.btn{
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 12px;
+    color: white;
+    background-color: rgba(0, 163, 255, 1);
+    text-shadow: 0.5px 1px #153c43;
+}
+
+
+/* spec.html */
+
+/* boxes both poster and description card */
+.flexbox-single-anime{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* description card */
+.discription-container-title{
+    background-color: white;
+    border-radius: 10px;
+    margin: 2% 5% 1% 5%;
+}
+
+/* anime title in description card */
+.anime-title{
+    background-color: rgba(0, 163, 255, 0.5);
+    padding: 20px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    border-radius: 10px 10px 0 0;
+}
+
+/* anime details in description card */
+.discription-text{
+    margin-left: 5%;
+    margin-right: 3%;
+    font-family: 'Goudy Bookletter 1911', serif;
+}
+
+/* anime picture */
+.poster{
+    width:370px; 
+    height: 550px;
+    border: 5px solid white;
+}
+
+ul li{
+    margin-left: 3%;
+}
+
+/* error message */
+.alert{
+    color: red;
+    background-color: rgba(250, 250, 250, 0.9);
+    text-align: center;
+}
+
+
+/* responsive settings */
+@media (max-width:575px) {
+    .card-body {
+        display: inline-flex;
+    }
+    img {
+        margin-left: 30%;
+        display: flex;
+        justify-content: center;
+    }
+    .poster{
+        margin: 0;
+    }
+    .card-title {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .card-text {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .btn{
+        margin-left: 40%;
+    }
+}
+
+@media (min-width:650px) {
+    .flexbox-single-anime{
+        flex-direction: unset;
+    }
+    .discription-container-title{
+        margin-left: 50px;
+    }
+    .poster{
+        width:13rem; 
+        height: 24rem;
+        border: 5px solid white;
+        margin-left: 15%;
+    }
+}
+
+@media (min-width:768px) {
+    .flexbox-search-dropdown{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .button-dropdown{
+        font-size: 1rem;
+    }
+
+}
+
+@media (min-width:992px) {
+    .author {
+        display: block;
+    }
+    .landing {
+        background-color: rgba(0, 163, 255, 0.4);
+    }
+    .poster{
+        width:20rem; 
+        height: 33rem;
+    }
+    .discription-container-title{
+        margin-left: 80px;
+    }
+    header h2 {
+        font-family: 'Goudy Bookletter 1911', serif;
+        display: block; 
+    }
+}
+
+@media (min-width: 1200px) {
+    .anime-title{ 
+        font-size: 40px;
+    }
+    .discription-text{
+        font-size: 20px; 
+    }
+    .poster{
+        width:25rem; 
+        height: 40rem;
+    }
+}
+
