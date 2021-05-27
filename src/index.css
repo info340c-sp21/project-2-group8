@@ -15,11 +15,9 @@ html {
 }
 h1 {
     font-family: 'Lobster', cursive;
-    font-size: 80px;
 }
 h2 {
     font-family: 'Goudy Bookletter 1911', serif;
-    font-size: 40px;
 }
 
 /* groups header and button */
@@ -50,7 +48,7 @@ h2 {
 body{
     background-image: url("./background2.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -182,7 +180,6 @@ img {
 /* see more button */
 .btn{
     font-family: 'Goudy Bookletter 1911', serif;
-    font-size: 12px;
     color: white;
     background-color: rgba(0, 163, 255, 1);
     text-shadow: 0.5px 1px #153c43;
