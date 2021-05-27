@@ -54,10 +54,10 @@ export function Footer() {
             <section className="author">
             <p>This website is develped by: <br />
                 Cici Feng 
-                <a href=" " className="linkMain">peiwenf@uw.edu</a > & Lei Lei
-                <a href="leil4@uw.edu" className="linkMain">leil4@uw.edu</a >
-                & Doris Yang<a href="yuxiny5@uw.edu" className="linkMain">yuxiny5@uw.edu</a >
-                & Angela Yun<a href="ayun6@uw.edu" className="linkMain">ayun6@uw.edu</a > <br />
+                <a href=" " className="linkMain"> peiwenf@uw.edu </a > & Lei Lei
+                <a href="leil4@uw.edu" className="linkMain"> leil4@uw.edu </a >
+                & Doris Yang<a href="yuxiny5@uw.edu" className="linkMain"> yuxiny5@uw.edu </a >
+                & Angela Yun<a href="ayun6@uw.edu" className="linkMain"> ayun6@uw.edu </a > <br />
             
             <cite> Background image from <a href="https://unsplash.com/" className="linkMain">Unsplash.com</a ></cite>.
             <cite> Website icon from <a href="https://www.iconfinder.com/" className="linkMain">Iconfinder.com</a ></cite>.
