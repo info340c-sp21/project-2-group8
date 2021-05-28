@@ -16,13 +16,35 @@ export function CreateMainPage(props){
     const [id,setId]=useState(0);
     console.log("before", props.cards)
     const [cards, setCards] = useState(props.cards);
+    console.log(props.cardsCopy)
+    // this resetdata makes aniwe go back by resetting the cards when see more is clicked
+    const [resetData, setReset] = useState(false);
     useEffect(()=> {
-        setCards(props.cards)
+        if(resetData === false) {
+            setCards(props.cards)
+        }
     },[props.cards])
-    console.log(cards)
-    const handleAdopt= (id) => {
+    useEffect(() => {
+        if(resetData === true) {
+            setCards(props.cardsCopy);
+            setReset(false);
+        }
+    },[resetData])
+    // console.log(cards)
+    
+    const handleAdopt = (id) => {
         setId(id);
-      }
+        setReset(true);
+    }
+
+    const clearCards = () => {
+        setCards(props.cardsCopy);
+    }
+    
+    // const resetDataVar = (variable) => {
+    //     variable = true;
+    // }
+    
       
       let idCard = [];
       for (let i = 0; i < props.cards.length; i++) {
@@ -50,7 +72,7 @@ export function CreateMainPage(props){
             <Route exact path='/spec' exact={true} render={() => (
               <CreateSpecPage id={idCard} />
               )}/>
-            <Route path='/' exact={true} render={() => <CreateMainPageTest cardsList={cards} adoptCallback={handleAdopt} searchCallBack = {renderSearch}/>} />          
+            <Route path='/' exact={true} render={() => <CreateMainPageTest cardsList={cards} adoptCallback={handleAdopt} searchCallBack = {renderSearch} clearCallback = {clearCards}/>} />          
         {/* </Switch> */}
     </Router>
     )
@@ -59,7 +81,7 @@ function CreateMainPageTest(props) {
     return (
         <div>
             <Header />
-            <Main cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack = {props.searchCallBack}/>
+            <Main cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack = {props.searchCallBack} clearCallback = {props.clearCallback}/>
             <Footer />
         </div>      
     )
@@ -68,7 +90,7 @@ function CreateMainPageTest(props) {
 function Main(props) {
     return (
         <main className="index-main">
-            <CreateSearch cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack = {props.searchCallBack}/>
+            <CreateSearch cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack = {props.searchCallBack} clearCallback = {props.clearCallback}/>
             {/* <CreateCardList cards={props.cards} adoptCallback={props.adoptCallback}/> */}
         </main>
     )
@@ -97,6 +119,7 @@ function CreateSearch(props) {
             <div className="searchBox" role="search">
                 <input type="text" placeholder=" Search..." id="sinput" aria-label="search input" onChange={e => setSearchInput(e.target.value)} value={searchInput}/>
                 <button aria-label="search" className="searchButton" onClick={() => props.searchCallBack(searchInput)}><FontAwesomeIcon icon={faSearch} aria-label="search button" id="search" /></button>
+                <button aria-label="clear" onClick={() => props.clearCallback()}>clear</button>
             </div>
         </div>
         <CreateCardList cardsList={props.cardsList} adoptCallback={props.adoptCallback}/>
@@ -148,7 +171,7 @@ function CreateCard(props) {
 
 function CreateCardList(props) {
     let createCards = props.cardsList.map((card) => {
-        return <CreateCard card={card} key={card.title} adoptCallback={props.adoptCallback}/>
+        return <CreateCard card={card} key={card.title} adoptCallback={props.adoptCallback} resetData={props.resetData}/>
     })
     return (
         <div className="container">

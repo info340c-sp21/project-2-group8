@@ -7,6 +7,7 @@ import { Router } from 'react-router';
 
 function App (props) {
     const [data,setData]=useState([]);
+    const [dataCopy,setDataCopy]=useState([]);
         const getData=()=>{
           fetch('data.json')
             .then(function(response){
@@ -14,6 +15,7 @@ function App (props) {
             })
             .then(function(myJson) {
               setData(myJson)
+              setDataCopy(myJson)
             });
         }
         useEffect(()=>{
@@ -29,13 +31,10 @@ function App (props) {
         //   </div>
 
         // <CreateLandingPage/>
-        <CreateMainPage cards={data}/>
+        <CreateMainPage cards={data} cardsCopy={dataCopy}/>
        
         // <CreateSpecPage />
         );
       }
 
 export default App;
-
-
-
