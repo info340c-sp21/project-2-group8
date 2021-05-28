@@ -136,7 +136,7 @@ function CreateCard(props) {
                             <p className="card-text">{"Genre: " + props.card.genreString} </p>
                             <p className="card-text">{"Recommended for: " + props.card.recommendedString} </p>
                             <button className="btn" id="see_more">
-                                <Link to={'/spec'} onClick={handleClick}>See More</Link>                          
+                                <Link className="reactButton" to={'/spec'} onClick={handleClick}>See More</Link>                          
                                 </button>                        
                             </div>
                     </div>
