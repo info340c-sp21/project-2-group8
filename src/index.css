@@ -49,17 +49,26 @@ body{
     background-image: url("./background2.jpg");
     background-position: center;
     background-size: contain;
+    /* display: flex;
+    min-height: 100vh;
+    flex-direction: column; */
+}
+
+.sets{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+
 }
 
 /* pushes down footer */
 main, .landing-main {
     flex: 1;
-    margin-bottom: 2%;
-    margin-top: 2%;
+    /* margin-bottom: 2%;
+    margin-top: 2%; */
 }
+
+
 
 /* footer section */
 footer{

@@ -54,10 +54,11 @@ export function CreateMainPage(props){
     }
 
     const renderSearch= (searchInput) => {
+      
         let searchOutput = [];
-        for (let i = 0; i < cards.length; i++) {
-            if (cards[i].title.toLowerCase().includes(searchInput.toLowerCase())) {
-                searchOutput.push(cards[i]);
+        for (let i = 0; i < props.cardsCopy.length; i++) {
+            if (props.cardsCopy[i].title.toLowerCase().includes(searchInput.toLowerCase())) {
+                searchOutput.push(props.cardsCopy[i]);
             } 
         }
         setCards(searchOutput)
@@ -79,7 +80,7 @@ export function CreateMainPage(props){
 }
 function CreateMainPageTest(props) {
     return (
-        <div>
+        <div className='sets'>
             <Header />
             <Main cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack = {props.searchCallBack} clearCallback = {props.clearCallback}/>
             <Footer />
