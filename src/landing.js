@@ -3,8 +3,8 @@ import { Footer } from './spec';
 export function CreateLandingPage() {
     return (
         <body>
-        <LandingMain/>
-        <Footer/>
+            <LandingMain />
+            <Footer />
         </body>
     )
 }

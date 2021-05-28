@@ -1,6 +1,6 @@
 import {
     Link,
-  } from "react-router-dom";
+} from "react-router-dom";
 
 export function CreateSpecPage(idCard) {
     return (
@@ -17,8 +17,8 @@ export function Header() {
         <header>
             <div className="container">
                 <button className="aniweButton">
-                    
-                <h1><Link className="reactButton" to={'/'}>ANIWE</Link>  </h1>
+
+                    <h1><Link className="reactButton" to={'/'}>ANIWE</Link>  </h1>
                 </button>
                 <h2>Start searching for your anime!</h2>
             </div>
@@ -55,42 +55,42 @@ export function Header() {
 // }
 
 function SpecMain(idCard) {
-    if(idCard.length === 0){
-        return(
+    if (idCard.length === 0) {
+        return (
             <p>no result</p>
         )
     } else {
         console.log(idCard)
         let current = idCard.id.id[0];
-        if(current === undefined){
-            return(
+        if (current === undefined) {
+            return (
                 <p>no result</p>
             )
         }
-    console.log(current)
-    let creatWebLinks = current.watchOn.map((item) => {
-        return <li key={item.source}><a href={item.link}>{item.source}</a></li>
-    })
+        console.log(current)
+        let creatWebLinks = current.watchOn.map((item) => {
+            return <li key={item.source}><a href={item.link}>{item.source}</a></li>
+        })
 
-    return (
-        <main className="index-main">
-            <div className="flexbox-single-anime">
-                <div className="discription-container">
-                < img className="poster" src={current.imgSrc} alt={"poster of" + current.title} />
-                </div>
+        return (
+            <main className="index-main">
+                <div className="flexbox-single-anime">
+                    <div className="discription-container">
+                        < img className="poster" src={current.imgSrc} alt={"poster of" + current.title} />
+                    </div>
 
-                <div className="discription-container-title">
-                    <h2 className="anime-title">{current.title}</h2>
-                    <p className="discription-text">{current.description}</p>
-                    <p className="discription-text">{"Recommended for: " + current.recommendedString}</p>
-                    <p className="discription-text">Watch On:</p>
-                    <ul>
-                        {creatWebLinks}
-                    </ul>
+                    <div className="discription-container-title">
+                        <h2 className="anime-title">{current.title}</h2>
+                        <p className="discription-text">{current.description}</p>
+                        <p className="discription-text">{"Recommended for: " + current.recommendedString}</p>
+                        <p className="discription-text">Watch On:</p>
+                        <ul>
+                            {creatWebLinks}
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </main>
-    )
+            </main>
+        )
 
     }
     // let current = idCard.id.id[0];
