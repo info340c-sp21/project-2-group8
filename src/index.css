@@ -94,6 +94,7 @@ header{
     background-color:rgba(0, 163, 255, 0.4);
     color: white;
     text-shadow: 1px 2px #153c43;
+    
 }
 header h1 {
     font-family: 'Lobster', cursive;
@@ -106,6 +107,7 @@ header h2 {
     border: transparent;
     color: white;
 }
+
 
 /* box that contains searchbox and dropdowns */
 .flexbox-search-dropdown{
@@ -184,7 +186,38 @@ img {
     padding-right: 60px;
 }
 
+/* like and favorites */
 
+/* .heart {
+    font-size: 23px;
+    margin-left: 10px;
+    color: grey;
+    cursor: pointer;
+}
+
+.heartActive, .heart:hover {
+    color: #E74E60;
+}
+
+.thumb {
+    color: grey;
+    position: relative;
+    margin-left: 150px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.reactButton:hover,  .favoriteNav:hover{
+    color: #A9F2FC
+}
+
+.reactButton {
+    color: white;
+    /* display: inline-block; */
+/* } */
+/* .favoriteNav {
+    color: white;
+} */ 
 
 /* see more button */
 .btn{
@@ -192,13 +225,38 @@ img {
     color: white;
     background-color: rgba(0, 163, 255, 1);
     text-shadow: 0.5px 1px #153c43;
+    margin-right: 10px;
+}
+
+.signout {
+    font-family: 'Goudy Bookletter 1911', serif;
+    color: white;
+    background-color: rgba(0, 163, 255, 1);
+    text-shadow: 0.5px 1px #153c43;
+    border-radius: 5px;
+    border: none;
+    margin-left: 900px;
+}
+
+.summary {
+    padding-right: 12px;
+    padding-bottom: 20px;
+}
+
+.submitButton {
+    margin-left: 10px;
 }
 
 .reactButton {
     color: white;
 }
 
-
+button {
+    cursor: pointer;
+    font-family: 'Goudy Bookletter 1911', serif;
+    color: white;
+    text-shadow: 0.5px 1px #153c43;
+}
 /* spec.html */
 
 /* boxes both poster and description card */

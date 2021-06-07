@@ -3,13 +3,15 @@ import { CreateSpecPage } from './spec';
 import { CreateMainPage } from './main';
 import { CreateLandingPage } from './landing';
 import { Router } from 'react-router';
-
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebase from 'firebase';
+import Header from './spec';
 
 function App (props) {
     const [data,setData]=useState([]);
     const [dataCopy,setDataCopy]=useState([]);
         const getData=()=>{
-          fetch('data.json')
+          fetch('data.json') 
             .then(function(response){
               return response.json();
             })
@@ -21,20 +23,73 @@ function App (props) {
         useEffect(()=>{
           getData()
         },[])
-        return (
-        //   <div className="App">
-        //     <Header />
-        //     <CreateSearch/>
-        //     <CreateCardList cards={data}/>
-        //     <Spec />
-        //     <Footer />
-        //   </div>
+        const [user, setUser] = useState(undefined);
+        // const [isLoading, setIsLoading] = useState(true);
+        useEffect(() => {
+          firebase.auth().onAuthStateChanged((firebaseUser) => {
+            if(firebaseUser) {
+              setUser(firebaseUser) 
+              //setIsLoading(false);
+            } else {
+              setUser(null)
+            }
+          })
+        })
+          const uiConfig = {
+            signInOptions: [
+              {provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            }
+          ],
+          // credentialHelper: 'none',
+          callbacks: {
+            signInSuccessWithAuthResult: () => false,
+          },
+    };
+    
+    // if (isLoading) {
+    //   return (
+    //     <div>
+    //       <i className="fa fa-spinner fa-spin fa-3x" aria-label="Connecting..."> </i>
+    //     </div>
+    //    )
+      
+    // }
+        if (!user) {
+          return (
+  
+              <div>
+                <header>
+              <div className="container">
+                  <h1>ANIWE</h1>
+                  <h2>Start searching for your anime!</h2> 
+              </div>
+              
+            </header>
+                <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/> 
+              </div>
+      
+            )
+        } else {
+          return (
+            //   <div className="App">
+            //     <Header />
+            //     <CreateSearch/>
+            //     <CreateCardList cards={data}/>
+            //     <Spec />
+            //     <Footer />
+            //   </div>
+    
+            // <CreateLandingPage/>
 
-        // <CreateLandingPage/>
-        <CreateMainPage cards={data} cardsCopy={dataCopy}/>
+
+            <CreateMainPage cards={data} cardsCopy={dataCopy}/>
+
+
+            
+            // <CreateSpecPage />
+            );
+        }
        
-        // <CreateSpecPage />
-        );
       }
 
 export default App;

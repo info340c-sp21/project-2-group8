@@ -2,7 +2,7 @@ import { Header } from './spec';
 import React, { useState, useEffect } from 'react';
 import { Footer } from './spec';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faRandom } from '@fortawesome/free-solid-svg-icons'
 import { CreateSpecPage } from './spec';
 
 import {
@@ -67,22 +67,36 @@ export function CreateMainPage(props) {
         // )
     }
 
+    const randomCard = () => {
+        let num1 = Math.floor(Math.random() * 30);
+        let num2 = Math.floor(Math.random() * 30);
+        while (num1 === num2) {
+            num2 = Math.floor(Math.random() * 30);
+        }
+        let randomArr = [];
+        randomArr.push(props.cardsCopy[num1]);
+        randomArr.push(props.cardsCopy[num2]);
+        // console.log(props.cardsCopy[num]);
+        setCards(randomArr);
+    }
+
     return (
         <Router>
             {/* <Switch> */}
             <Route exact path='/spec' exact={true} render={() => (
                 <CreateSpecPage id={idCard} />
             )} />
-            <Route path='/' exact={true} render={() => <CreateMainPageTest cardsList={cards} adoptCallback={handleAdopt} searchCallBack={renderSearch} clearCallback={clearCards} />} />
+            <Route path='/' exact={true} render={() => <CreateMainPageTest cardsList={cards} adoptCallback={handleAdopt} searchCallBack={renderSearch} clearCallback={clearCards} randomCallback={randomCard} />} />
             {/* </Switch> */}
         </Router>
     )
 }
+
 function CreateMainPageTest(props) {
     return (
         <div className='sets'>
             <Header />
-            <Main cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack={props.searchCallBack} clearCallback={props.clearCallback} />
+            <Main cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack={props.searchCallBack} clearCallback={props.clearCallback} randomCallback={props.randomCallback}/>
             <Footer />
         </div>
     )
@@ -91,7 +105,7 @@ function CreateMainPageTest(props) {
 function Main(props) {
     return (
         <main className="index-main">
-            <CreateSearch cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack={props.searchCallBack} clearCallback={props.clearCallback} />
+            <CreateSearch cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack={props.searchCallBack} clearCallback={props.clearCallback} randomCallback={props.randomCallback}/>
             {/* <CreateCardList cards={props.cards} adoptCallback={props.adoptCallback}/> */}
         </main>
     )
@@ -117,17 +131,17 @@ function CreateSearch(props) {
         setSearchInput('');
     }
 
-
     return (
         <div>
             <div className="flexbox-search-dropdown">
                 <div className="searchBox" role="search">
                     <input type="text" placeholder=" Search..." id="sinput" aria-label="search input" onChange={e => setSearchInput(e.target.value)} value={searchInput} />
                     <button aria-label="search" className="searchButton" onClick={() => props.searchCallBack(searchInput)}><FontAwesomeIcon icon={faSearch} aria-label="search button" id="search" /></button>
+                    <button aria-label="random" className="searchButton" onClick={() => props.randomCallback()}><FontAwesomeIcon icon={faRandom} aria-label="random button" /></button>
                     <button aria-label="clear" onClick={() => { props.clearCallback(); clearInput() }}>clear</button>
                 </div>
             </div>
-            <CreateCardList cardsList={props.cardsList} adoptCallback={props.adoptCallback} />
+            <CreateCardList cardsList={props.cardsList} adoptCallback={props.adoptCallback} randomCallback={props.randomCallback} />
         </div>
     )
 }
@@ -176,7 +190,7 @@ function CreateCard(props) {
 
 function CreateCardList(props) {
     let createCards = props.cardsList.map((card) => {
-        return <CreateCard card={card} key={card.title} adoptCallback={props.adoptCallback} resetData={props.resetData} />
+        return <CreateCard card={card} key={card.title} adoptCallback={props.adoptCallback} resetData={props.resetData} randomCallback={props.randomCallback}/>
     })
     return (
         <div className="container">
@@ -186,6 +200,5 @@ function CreateCardList(props) {
         </div>
     )
 }
-
 
 

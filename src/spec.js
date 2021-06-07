@@ -1,25 +1,35 @@
-import {
-    Link,
-} from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import { React, useState } from 'react';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebase from 'firebase';
+
 
 export function CreateSpecPage(idCard) {
     return (
         <div>
             <Header />
             <SpecMain id={idCard} />
-            <Footer />
+            <Footer /> 
         </div>
     )
 }
+// const [errorMessage, setErrorMessage] = useState(undefined);
+const handleSignOut = () => {
+    // setErrorMessage(null)
+    firebase.auth().signOut()
+}
 
 export function Header() {
+    
     return (
         <header>
             <div className="container">
                 <button className="aniweButton">
-
                     <h1><Link className="reactButton" to={'/'}>ANIWE</Link>  </h1>
                 </button>
+           
+                <button className="signout" onClick={handleSignOut}>Sign Out</button>
+     
                 <h2>Start searching for your anime!</h2>
             </div>
         </header>
@@ -64,7 +74,7 @@ function SpecMain(idCard) {
         let current = idCard.id.id[0];
         if (current === undefined) {
             return (
-                <p>no result</p>
+                <Redirect to='/' />
             )
         }
         console.log(current)
@@ -124,7 +134,7 @@ export function Footer() {
     return (
         <footer>
             <section className="author">
-                <p>This website is develped by: <br />
+                <p>This website is developed by: <br />
                 Cici Feng
                 <a href=" " className="linkMain"> peiwenf@uw.edu </a > & Lei Lei
                 <a href="leil4@uw.edu" className="linkMain"> leil4@uw.edu </a >
