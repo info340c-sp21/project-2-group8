@@ -10,19 +10,43 @@ import Header from './spec';
 function App (props) {
     const [data,setData]=useState([]);
     const [dataCopy,setDataCopy]=useState([]);
-        const getData=()=>{
-          fetch('data.json') 
-            .then(function(response){
-              return response.json();
-            })
-            .then(function(myJson) {
-              setData(myJson)
-              setDataCopy(myJson)
-            });
-        }
+        // const getData=()=>{
+        //   fetch('data.json') 
+        //     .then(function(response){
+        //       return response.json();
+        //     })
+        //     .then(function(myJson) {
+        //       setData(myJson)
+        //       setDataCopy(myJson)
+        //     });
+        // }
+        // useEffect(()=>{
+        //   getData()
+        // },[])
         useEffect(()=>{
-          getData()
-        },[])
+        const cardRef = firebase.database().ref('cards');
+        cardRef.on('value', (snapshot) => {
+          let newCardState = [];
+          snapshot.forEach(data => {
+            const dataVal = data.val()
+            newCardState.push({
+              id: dataVal.id,
+              title: dataVal.title,
+              airDate: dataVal.airDate,
+              genre:dataVal.genre,
+              genreString: dataVal.genreString,
+              recommendedString: dataVal.recommendedString,
+              recommended: dataVal.recommended,
+              description: dataVal.description,
+              imgSrc: dataVal.imgSrc,
+              watchOn: dataVal.watchOn
+            })
+          })
+          newCardState = newCardState.slice(0,30);
+          setData(newCardState);
+          setDataCopy(newCardState);
+        })},[]);
+          
         const [user, setUser] = useState(undefined);
         // const [isLoading, setIsLoading] = useState(true);
         useEffect(() => {
@@ -82,7 +106,7 @@ function App (props) {
             // <CreateLandingPage/>
 
 
-            <CreateMainPage cards={data} cardsCopy={dataCopy}/>
+            <CreateMainPage cards={data} cardsCopy={dataCopy} currentUser={user}/>
 
 
             

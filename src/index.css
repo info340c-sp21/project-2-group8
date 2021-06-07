@@ -219,6 +219,22 @@ img {
     color: white;
 } */ 
 
+.thumb {
+    color: grey;
+    position: relative;
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.user-liked {
+	color: red;
+    position: relative;
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 /* see more button */
 .btn{
     font-family: 'Goudy Bookletter 1911', serif;

@@ -2,8 +2,10 @@ import { Header } from './spec';
 import React, { useState, useEffect } from 'react';
 import { Footer } from './spec';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faRandom } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faRandom, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import { CreateSpecPage } from './spec';
+import firebase from 'firebase';
+
 
 import {
     BrowserRouter as Router,
@@ -86,7 +88,7 @@ export function CreateMainPage(props) {
             <Route exact path='/spec' exact={true} render={() => (
                 <CreateSpecPage id={idCard} />
             )} />
-            <Route path='/' exact={true} render={() => <CreateMainPageTest cardsList={cards} adoptCallback={handleAdopt} searchCallBack={renderSearch} clearCallback={clearCards} randomCallback={randomCard} />} />
+            <Route path='/' exact={true} render={() => <CreateMainPageTest cardsList={cards} adoptCallback={handleAdopt} searchCallBack={renderSearch} clearCallback={clearCards} randomCallback={randomCard} currentUser={props.currentUser} />} />
             {/* </Switch> */}
         </Router>
     )
@@ -96,7 +98,7 @@ function CreateMainPageTest(props) {
     return (
         <div className='sets'>
             <Header />
-            <Main cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack={props.searchCallBack} clearCallback={props.clearCallback} randomCallback={props.randomCallback}/>
+            <Main cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack={props.searchCallBack} clearCallback={props.clearCallback} randomCallback={props.randomCallback} currentUser={props.currentUser}/>
             <Footer />
         </div>
     )
@@ -105,7 +107,7 @@ function CreateMainPageTest(props) {
 function Main(props) {
     return (
         <main className="index-main">
-            <CreateSearch cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack={props.searchCallBack} clearCallback={props.clearCallback} randomCallback={props.randomCallback}/>
+            <CreateSearch cardsList={props.cardsList} adoptCallback={props.adoptCallback} searchCallBack={props.searchCallBack} clearCallback={props.clearCallback} randomCallback={props.randomCallback} currentUser={props.currentUser}/>
             {/* <CreateCardList cards={props.cards} adoptCallback={props.adoptCallback}/> */}
         </main>
     )
@@ -141,7 +143,7 @@ function CreateSearch(props) {
                     <button aria-label="clear" onClick={() => { props.clearCallback(); clearInput() }}>clear</button>
                 </div>
             </div>
-            <CreateCardList cardsList={props.cardsList} adoptCallback={props.adoptCallback} randomCallback={props.randomCallback} />
+            <CreateCardList cardsList={props.cardsList} adoptCallback={props.adoptCallback} randomCallback={props.randomCallback} currentUser={props.currentUser}/>
         </div>
     )
 }
@@ -164,6 +166,35 @@ function CreateCard(props) {
         props.adoptCallback(props.card.id)
     };
 
+    const likeAnime = () => {
+        let likeId = props.card.id-1
+        let likeDS = firebase.database().ref('cards').child(likeId +'/likes');
+        let updateLikes = {};
+        // console.log(props)
+        if (props.card.likes !== undefined) {
+          updateLikes = props.cards.likes;
+        }
+        if (updateLikes.hasOwnProperty(props.currentUser.uid)) {
+          updateLikes[props.currentUser.uid] = null;
+        } else {
+          updateLikes[props.currentUser.uid] = true;
+        }
+        likeDS.set(updateLikes)
+        .catch((error)=> {console.log(error.message)})
+    }
+     
+      let card = props.card; 
+    
+      //counting likes
+      let likeCount = 0; //count likes
+      let userLikes = false; //current user has liked
+      if(card.likes){
+        likeCount = Object.keys(card.likes).length;
+        if(card.likes[props.currentUser.uid]) 
+          userLikes = true; 
+      }
+      console.log(userLikes)
+
     return (
         <div className="singleCard col-sm-12 col-md-6 d-flex">
             <div className="card mb-4 ml-2 mr-2">
@@ -180,6 +211,7 @@ function CreateCard(props) {
                             <button className="btn" id="see_more">
                                 <Link className="reactButton" to={'/spec'} onClick={handleClick}>See More</Link>
                             </button>
+                            <FontAwesomeIcon icon={faThumbsUp} aria-label="like button" className={(userLikes ? 'user-liked': 'thumb')} onClick={likeAnime}/>
                         </div>
                     </div>
                 </div>
@@ -190,7 +222,7 @@ function CreateCard(props) {
 
 function CreateCardList(props) {
     let createCards = props.cardsList.map((card) => {
-        return <CreateCard card={card} key={card.title} adoptCallback={props.adoptCallback} resetData={props.resetData} randomCallback={props.randomCallback}/>
+        return <CreateCard card={card} key={card.title} adoptCallback={props.adoptCallback} resetData={props.resetData} randomCallback={props.randomCallback} currentUser={props.currentUser}/>
     })
     return (
         <div className="container">
