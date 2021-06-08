@@ -27,22 +27,25 @@ function App (props) {
         const cardRef = firebase.database().ref('cards');
         cardRef.on('value', (snapshot) => {
           let newCardState = [];
-          snapshot.forEach(data => {
-            const dataVal = data.val()
-            newCardState.push({
-              id: dataVal.id,
-              title: dataVal.title,
-              airDate: dataVal.airDate,
-              genre:dataVal.genre,
-              genreString: dataVal.genreString,
-              recommendedString: dataVal.recommendedString,
-              recommended: dataVal.recommended,
-              description: dataVal.description,
-              imgSrc: dataVal.imgSrc,
-              watchOn: dataVal.watchOn
-            })
-          })
-          newCardState = newCardState.slice(0,30);
+          newCardState = snapshot.val();
+          console.log(newCardState)
+          // snapshot.forEach(data => {
+          //   const dataVal = data.val()
+          //   newCardState.push({
+          //     id: dataVal.id,
+          //     title: dataVal.title,
+          //     airDate: dataVal.airDate,
+          //     genre:dataVal.genre,
+          //     genreString: dataVal.genreString,
+          //     recommendedString: dataVal.recommendedString,
+          //     recommended: dataVal.recommended,
+          //     description: dataVal.description,
+          //     imgSrc: dataVal.imgSrc,
+          //     watchOn: dataVal.watchOn,
+          //     likes: dataVal.likes
+          //   })
+          // })
+          // newCardState = newCardState.slice(0,30);
           setData(newCardState);
           setDataCopy(newCardState);
         })},[]);

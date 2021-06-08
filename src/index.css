@@ -228,10 +228,12 @@ img {
 }
 
 .user-liked {
-	color: red;
+	color: gold;
     position: relative;
+    margin-bottom: 0px;
+    padding-bottom: 0;
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
 }
 

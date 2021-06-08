@@ -170,9 +170,9 @@ function CreateCard(props) {
         let likeId = props.card.id-1
         let likeDS = firebase.database().ref('cards').child(likeId +'/likes');
         let updateLikes = {};
-        // console.log(props)
-        if (props.card.likes !== undefined) {
-          updateLikes = props.cards.likes;
+        console.log('really?',props.card)
+        if (props.card.likes != undefined) {
+          updateLikes = props.card.likes;
         }
         if (updateLikes.hasOwnProperty(props.currentUser.uid)) {
           updateLikes[props.currentUser.uid] = null;
@@ -184,6 +184,7 @@ function CreateCard(props) {
     }
      
       let card = props.card; 
+    //   console.log(card.id)
     
       //counting likes
       let likeCount = 0; //count likes
@@ -193,7 +194,7 @@ function CreateCard(props) {
         if(card.likes[props.currentUser.uid]) 
           userLikes = true; 
       }
-      console.log(userLikes)
+      console.log('userLikes',userLikes)
 
     return (
         <div className="singleCard col-sm-12 col-md-6 d-flex">
@@ -211,7 +212,7 @@ function CreateCard(props) {
                             <button className="btn" id="see_more">
                                 <Link className="reactButton" to={'/spec'} onClick={handleClick}>See More</Link>
                             </button>
-                            <FontAwesomeIcon icon={faThumbsUp} aria-label="like button" className={(userLikes ? 'user-liked': 'thumb')} onClick={likeAnime}/>
+                            <FontAwesomeIcon icon={faThumbsUp} aria-label="like button" className={(userLikes ? 'user-liked': 'thumb')} onClick={likeAnime}/><span>{/*space*/} {likeCount}</span>
                         </div>
                     </div>
                 </div>
