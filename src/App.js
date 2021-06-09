@@ -1,11 +1,11 @@
 import React, { useState, useEffect} from 'react';
-import { CreateSpecPage } from './spec';
+// import { CreateSpecPage } from './spec';
 import { CreateMainPage } from './main';
-import { CreateLandingPage } from './landing';
-import { Router } from 'react-router';
+// import { CreateLandingPage } from './landing';
+// import { Router } from 'react-router';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
-import Header from './spec';
+// import Header from './spec';
 
 function App (props) {
     const [data,setData]=useState([]);
@@ -28,7 +28,6 @@ function App (props) {
         cardRef.on('value', (snapshot) => {
           let newCardState = [];
           newCardState = snapshot.val();
-          console.log(newCardState)
           // snapshot.forEach(data => {
           //   const dataVal = data.val()
           //   newCardState.push({
@@ -56,7 +55,7 @@ function App (props) {
           firebase.auth().onAuthStateChanged((firebaseUser) => {
             if(firebaseUser) {
               setUser(firebaseUser) 
-              //setIsLoading(false);
+              // setIsLoading(false);
             } else {
               setUser(null)
             }
@@ -110,7 +109,6 @@ function App (props) {
 
 
             <CreateMainPage cards={data} cardsCopy={dataCopy} currentUser={user}/>
-
 
             
             // <CreateSpecPage />

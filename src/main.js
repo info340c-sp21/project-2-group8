@@ -2,8 +2,9 @@ import { Header } from './spec';
 import React, { useState, useEffect } from 'react';
 import { Footer } from './spec';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faRandom, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faRandom, faThumbsUp, faHeart } from '@fortawesome/free-solid-svg-icons'
 import { CreateSpecPage } from './spec';
+import {CreateFavPage} from './favorites'
 import firebase from 'firebase';
 
 
@@ -11,14 +12,11 @@ import {
     BrowserRouter as Router,
     Link,
     Route,
-    Switch
 } from "react-router-dom";
 
 export function CreateMainPage(props) {
     const [id, setId] = useState(0);
-    console.log("before", props.cards)
     const [cards, setCards] = useState(props.cards);
-    console.log(props.cardsCopy)
     // this resetdata makes aniwe go back by resetting the cards when see more is clicked
     const [resetData, setReset] = useState(false);
     useEffect(() => {
@@ -32,7 +30,6 @@ export function CreateMainPage(props) {
             setReset(false);
         }
     }, [resetData])
-    // console.log(cards)
 
     const handleAdopt = (id) => {
         setId(id);
@@ -64,9 +61,6 @@ export function CreateMainPage(props) {
             }
         }
         setCards(searchOutput)
-        // return (
-        //     // <CreateCardList cards={searchOutput}/>
-        // )
     }
 
     const randomCard = () => {
@@ -78,9 +72,22 @@ export function CreateMainPage(props) {
         let randomArr = [];
         randomArr.push(props.cardsCopy[num1]);
         randomArr.push(props.cardsCopy[num2]);
-        // console.log(props.cardsCopy[num]);
         setCards(randomArr);
     }
+    let favoriteCard = [];
+    cards.map((card) => {
+        // let favId = props.card.id-1
+        // let facDS = firebase.database().ref('cards').child(likeId +'/favorites');
+        let updateFav = {};
+        if (card.favorites != undefined) {
+          updateFav = card.favorites;
+        }
+        if (updateFav.hasOwnProperty(props.currentUser.uid)) {
+            favoriteCard.push(card);
+        } 
+        // likeDS.set(updateLikes)
+        // .catch((error)=> {console.log(error.message)})
+    })
 
     return (
         <Router>
@@ -90,6 +97,8 @@ export function CreateMainPage(props) {
             )} />
             <Route path='/' exact={true} render={() => <CreateMainPageTest cardsList={cards} adoptCallback={handleAdopt} searchCallBack={renderSearch} clearCallback={clearCards} randomCallback={randomCard} currentUser={props.currentUser} />} />
             {/* </Switch> */}
+            <Route path='/favorites' render = {() =>
+                 <CreateFavPage  cardsList={favoriteCard} adoptCallback={handleAdopt} currentUser={props.currentUser} />}/>
         </Router>
     )
 }
@@ -113,20 +122,6 @@ function Main(props) {
     )
 }
 
-
-// function CreateSearch() {
-//     return (
-//         <div class="flexbox-search-dropdown">
-//             <div className="searchBox" role="search">
-//                 <input type="text" placeholder=" Search..." id="sinput" aria-label="search input" />
-//                 {/* <button aria-label="search" className="searchButton">
-//                     <i className="fas fa-search" aria-label="search button" id="search"></i>
-//                 </button> */}
-//                 <button aria-label="search" className="searchButton"><FontAwesomeIcon icon={faSearch} aria-label="search button" id="search" /></button>
-//             </div>
-//         </div>
-//     )
-// }
 function CreateSearch(props) {
     const [searchInput, setSearchInput] = useState("");
     const clearInput = () => {
@@ -147,21 +142,8 @@ function CreateSearch(props) {
         </div>
     )
 }
-// function RenderSearch(data, searchInput) {
-//     let searchOutput = [];
-//     for (let i = 0; i < data.length; i++) {
-//         if (data[i].title.toLowerCase().includes(searchInput.toLowerCase())) {
-//             searchOutput.push(data[i]);
-//         } 
-//     }
-//     console.log(searchOutput)
-//     setCards(searchOutput)
-//     // return (
-//     //     // <CreateCardList cards={searchOutput}/>
-//     // )
-// }
 
-function CreateCard(props) {
+export function CreateCard(props) {
     const handleClick = () => {
         props.adoptCallback(props.card.id)
     };
@@ -170,7 +152,6 @@ function CreateCard(props) {
         let likeId = props.card.id-1
         let likeDS = firebase.database().ref('cards').child(likeId +'/likes');
         let updateLikes = {};
-        console.log('really?',props.card)
         if (props.card.likes != undefined) {
           updateLikes = props.card.likes;
         }
@@ -184,7 +165,6 @@ function CreateCard(props) {
     }
      
       let card = props.card; 
-    //   console.log(card.id)
     
       //counting likes
       let likeCount = 0; //count likes
@@ -194,7 +174,32 @@ function CreateCard(props) {
         if(card.likes[props.currentUser.uid]) 
           userLikes = true; 
       }
-      console.log('userLikes',userLikes)
+
+      const favoriteAnime = () => {
+        let likeId = props.card.id-1
+        let favoriteDS = firebase.database().ref('cards').child(likeId +'/favorites');
+        let updateFavorites = {};
+        if (props.card.favorites != undefined) {
+          updateFavorites = props.card.favorites;
+        }
+        if (updateFavorites.hasOwnProperty(props.currentUser.uid)) {
+            updateFavorites[props.currentUser.uid] = null;
+        } else {
+            updateFavorites[props.currentUser.uid] = true;
+        }
+        favoriteDS.set(updateFavorites)
+        .catch((error)=> {console.log(error.message)})
+
+        let favoriteID = props.card.id -1;
+        var updates = {};
+        updates['/' + props.card] = 1;
+      }
+      let userFavorites = false; //current user has liked
+      if(card.favorites){
+        // likeCount = Object.keys(card.likes).length;
+        if(card.favorites[props.currentUser.uid]) 
+        userFavorites = true; 
+      }
 
     return (
         <div className="singleCard col-sm-12 col-md-6 d-flex">
@@ -212,6 +217,7 @@ function CreateCard(props) {
                             <button className="btn" id="see_more">
                                 <Link className="reactButton" to={'/spec'} onClick={handleClick}>See More</Link>
                             </button>
+                            <FontAwesomeIcon icon={faHeart} aria-label="favorite button" className={(userFavorites ? "heartActive": "heart")} onClick={favoriteAnime}/>
                             <FontAwesomeIcon icon={faThumbsUp} aria-label="like button" className={(userLikes ? 'user-liked': 'thumb')} onClick={likeAnime}/><span>{/*space*/} {likeCount}</span>
                         </div>
                     </div>
@@ -222,6 +228,15 @@ function CreateCard(props) {
 }
 
 function CreateCardList(props) {
+    if (props.card == []) {
+        return (
+        <div className="container">
+            <div className="row">
+                <p>"Results Not Found"</p>
+            </div>
+         </div>
+        )
+    }
     let createCards = props.cardsList.map((card) => {
         return <CreateCard card={card} key={card.title} adoptCallback={props.adoptCallback} resetData={props.resetData} randomCallback={props.randomCallback} currentUser={props.currentUser}/>
     })

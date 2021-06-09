@@ -1,4 +1,4 @@
-import { Link, Redirect } from "react-router-dom";
+import { Link, Redirect, NavLink} from "react-router-dom";
 import { React, useState } from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
@@ -27,7 +27,9 @@ export function Header() {
                 <button className="aniweButton">
                     <h1><Link className="reactButton" to={'/'}>ANIWE</Link>  </h1>
                 </button>
-           
+                <ul className="list-unstyled">
+                    <li><NavLink exact to='/favorites' className="favoriteNav">Favorites</NavLink></li>
+                </ul>
                 <button className="signout" onClick={handleSignOut}>Sign Out</button>
      
                 <h2>Start searching for your anime!</h2>
