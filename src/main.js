@@ -6,6 +6,7 @@ import { faSearch, faRandom, faThumbsUp, faHeart } from '@fortawesome/free-solid
 import { CreateSpecPage } from './spec';
 import {CreateFavPage} from './favorites'
 import firebase from 'firebase';
+import Loader from "react-loader-spinner";
 
 
 import {
@@ -91,6 +92,14 @@ export function CreateMainPage(props) {
 
     return (
         <Router>
+            <Loader
+        type="Puff"
+        color='rgba(0, 163, 255, 1)'
+        height={100}
+        width={100}
+        timeout={1000}
+        className='load' 
+      />
             {/* <Switch> */}
             <Route exact path='/spec' exact={true} render={() => (
                 <CreateSpecPage id={idCard} />
@@ -99,6 +108,7 @@ export function CreateMainPage(props) {
             {/* </Switch> */}
             <Route path='/favorites' render = {() =>
                  <CreateFavPage  cardsList={favoriteCard} adoptCallback={handleAdopt} currentUser={props.currentUser} />}/>
+                 <Route path='/random' exact={true} render = {() => <RandomCard cardsList = {cards} adoptCallback={handleAdopt} searchCallBack={renderSearch} clearCallback={clearCards} randomCallback={randomCard} currentUser={props.currentUser}/>} />
         </Router>
     )
 }
@@ -134,7 +144,7 @@ function CreateSearch(props) {
                 <div className="searchBox" role="search">
                     <input type="text" placeholder=" Search..." id="sinput" aria-label="search input" onChange={e => setSearchInput(e.target.value)} value={searchInput} />
                     <button aria-label="search" className="searchButton" onClick={() => props.searchCallBack(searchInput)}><FontAwesomeIcon icon={faSearch} aria-label="search button" id="search" /></button>
-                    <button aria-label="random" className="searchButton" onClick={() => props.randomCallback()}><FontAwesomeIcon icon={faRandom} aria-label="random button" /></button>
+                    {/* <button aria-label="random" className="searchButton" onClick={() => props.randomCallback()}><FontAwesomeIcon icon={faRandom} aria-label="random button" /></button> */}
                     <button aria-label="clear" onClick={() => { props.clearCallback(); clearInput() }}>clear</button>
                 </div>
             </div>
@@ -228,6 +238,14 @@ export function CreateCard(props) {
 }
 
 function CreateCardList(props) {
+    if(props.cardsList.length === 0){
+        return (
+            <div>       
+                <p className='alert'>No Result Found</p >
+            </div>
+        
+        )
+    }
     if (props.card == []) {
         return (
         <div className="container">
@@ -249,4 +267,120 @@ function CreateCardList(props) {
     )
 }
 
+function RandomCard(random) { 
+    
+    return(
+        <div>
+            <Header />
+            <RandomComponents random={random} adoptCallback={random.adoptCallback} searchCallBack={random.searchCallBack} clearCallback={random.clearCallback} randomCallback={random.randomCallback} currentUser={random.currentUser}/>
+            
+        </div>
+    )
+}
+{/* <CreateRandomCardList random={resultNew} adoptCallback={random.adoptCallback} randomCallback={random.randomCallback} currentUser={random.currentUser}/> */}
 
+
+function RandomComponents(random) {
+    const [resultNew, setResultNew] = useState("");
+    let cardsList = random.random.cardsList;
+    const [filterVal, setFilterVal] = useState("");
+    const filter = (e) => {
+        // e.preventDefault();
+        setFilterVal(e.target.value);
+        // console.log(e.target.value);
+    }
+    
+    let singleCard = <div></div>;
+    // var cardsList = [];
+    // for (var key in cardsListReplace) {
+    // cardsList.push(cardsListReplace[key]);
+    // }
+
+    const generate = () => {
+        let result = "";
+        if (filterVal === "") {
+            return;
+        } else if (filterVal === "beginners") {
+            let beginerList = [];
+            for (let i = 0; i < cardsList.length-1; i++) {
+                if (cardsList[i].recommendedString.includes("Beginners")) {
+                    beginerList.push(cardsList[i])
+                }
+            }
+            let num = Math.floor(Math.random() * beginerList.length);
+            result = beginerList[num];
+            // setResult(beginerList[num]);
+            // console.log(beginerList[num])
+        } else if (filterVal === "fans") {
+            let fanList = [];
+            for (let i = 0; i < cardsList.length-1; i++) {
+                if (cardsList[i].recommendedString.includes("Fans")) {
+                    fanList.push(cardsList[i])
+                }
+            }
+            let num = Math.floor(Math.random() * fanList.length);
+            result = fanList[num];
+        } else {
+            let freakList = [];
+            for (let i = 0; i < cardsList.length-1; i++) {
+                if (cardsList[i].recommendedString.includes("Freaks")) {
+                    freakList.push(cardsList[i])
+                }
+            }
+            let num = Math.floor(Math.random() * freakList.length);
+            result = freakList[num];
+        }
+        // console.log(result);
+        setResultNew(result);
+        // singleCard = <CreateCardList random={result}/>
+        
+    }
+    // console.log(resultNew);
+    // if (result !== "") {
+    //     singleCard = <CreateCardList random={result}/>
+    //     console.log(123);
+    // } else {
+    //     console.log(0)
+    // }
+    return(
+        <div className="randomContainer">
+            {/* <div className="randomContainer">
+                <button className="randomBtn">Generate</button>
+            </div> */}
+            <main>
+                <div className="flex-container">
+                    <button className="button-dropdown" value="beginners" id="beginners" aria-label="Beginners" onClick={e => filter(e)}>Beginners</button>
+                    <button className="button-dropdown" value="fans" id="anime_fans" aria-label="Anime Fans" onClick={e => filter(e)}>Anime Fans</button>
+                    <button className="button-dropdown" value="freaks" id="anime_freaks" aria-label="Anime Freaks" onClick={e => filter(e)}>Anime Freaks</button>
+                </div>
+                <button className="button-dropdown randomBtn" onClick={() => generate()}>Generate</button>
+            </main>
+            <CreateRandomCardList random={resultNew} adoptCallback={random.adoptCallback} randomCallback={random.randomCallback} currentUser={random.currentUser}/> 
+            {/* {singleCard} */}
+        </div>
+    )
+}
+
+function CreateRandomCardList(result) {
+    
+    // console.log(result.random);
+
+    // let createCards = random.random.cardsList.map((card) => {
+    //     return <CreateCard card={card} key={card.title}/>
+    // })
+    if (result.random.length === 0) {
+        return <p className='alert'>Start Generating!</p >
+
+        
+
+    } else {
+        return (
+            <div className="container">
+                <div className="row">
+                    {/* {createCards} */}
+                    <CreateCard card={result.random} key={result.random.title} adoptCallback={result.adoptCallback} resetData={result.resetData} randomCallback={result.randomCallback} currentUser={result.currentUser}/>
+                </div>
+            </div>
+        )
+    }
+}

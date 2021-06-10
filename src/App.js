@@ -6,6 +6,7 @@ import { CreateMainPage } from './main';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 // import Header from './spec';
+import Loader from "react-loader-spinner";
 
 function App (props) {
     const [data,setData]=useState([]);
@@ -84,6 +85,14 @@ function App (props) {
           return (
   
               <div>
+                <Loader
+        type="Puff"
+        color='rgba(0, 163, 255, 1)'
+        height={100}
+        width={100}
+        timeout={1000}
+        className='load' 
+      />
                 <header>
               <div className="container">
                   <h1>ANIWE</h1>

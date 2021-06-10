@@ -6,6 +6,11 @@ html {
     height: 100%;
 }
 
+.load {
+    background-color: rgba(11, 12, 12, 0.2);
+    text-align: center;
+}
+
 /* landing page's header */
 .landing {
     text-align: center;
@@ -55,10 +60,9 @@ body{
 }
 
 .sets{
-    display: grid;
-    min-height: 100%;
-    /* flex-direction: column; */
-    grid-template-rows: 1fr auto;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 
 }
 
@@ -80,8 +84,6 @@ footer{
     text-align: center;
     text-shadow: 0.5px 0.5px #153c43;
     background-color: rgba(11, 12, 12, 0.6);
-    grid-row-start: 8;
-    grid-row-end: 9
 }
 .linkMain{
     color: rgba(250, 250, 250, 0.8);
@@ -108,6 +110,9 @@ header h2 {
 .aniweButton{
     background-color: transparent;
     border: transparent;
+    color: white;
+}
+a:hover {
     color: white;
 }
 
@@ -144,7 +149,9 @@ input{
 /* boxs buttons */
 .flex-container{
     display: flex;
+    justify-content: center;
     margin-left: 1%;
+    
 }
 
 /* filter buttons */
@@ -189,54 +196,23 @@ img {
     padding-right: 60px;
 }
 
-/* like and favorites */
-
-/* .heart {
-    font-size: 23px;
-    margin-left: 10px;
-    color: grey;
-    cursor: pointer;
+/* random page */
+.randomContainer {
+    text-align: center;
 }
 
-.heartActive, .heart:hover {
-    color: #E74E60;
+.randomBtn {
+    background: #00A3FF;
+    font-size: 30px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-
-.thumb {
-    color: grey;
-    position: relative;
-    margin-left: 150px;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.reactButton:hover,  .favoriteNav:hover{
-    color: #A9F2FC
-}
-
-.reactButton {
-    color: white;
-    /* display: inline-block; */
-/* } */
-/* .favoriteNav {
-    color: white;
-} */ 
 
 .thumb {
     color: grey;
     position: relative;
     margin-left: 10px;
     font-size: 20px;
-    cursor: pointer;
-}
-
-.user-liked {
-	color: gold;
-    position: relative;
-    margin-bottom: 0px;
-    padding-bottom: 0;
-    margin-left: 10px;
-    font-size: 22px;
     cursor: pointer;
 }
 
@@ -249,6 +225,16 @@ img {
 
 .heartActive {
     color: #E74E60;
+    position: relative;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    margin-left: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.user-liked {
+	color: gold;
     position: relative;
     margin-bottom: 0px;
     padding-bottom: 0;
@@ -273,7 +259,9 @@ img {
     text-shadow: 0.5px 1px #153c43;
     border-radius: 5px;
     border: none;
-    margin-left: 900px;
+    margin-top: 20px;
+    margin-left: 300px;
+    position: absolute;
 }
 
 .summary {
@@ -345,6 +333,23 @@ ul li{
     text-align: center;
 }
 
+.alertContainer{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+@media (max-width:540px) {
+    .signout{
+        margin-left: 270px;
+        position: relative;
+        margin-top: 0;
+    }
+}
+
 
 /* responsive settings */
 @media (max-width:575px) {
@@ -372,6 +377,7 @@ ul li{
     .btn{
         margin-left: 40%;
     }
+
 }
 
 @media (min-width:650px) {
@@ -389,8 +395,10 @@ ul li{
         margin-top: 50%;
         margin-bottom: 50%;
     }
-}
 
+
+    
+}
 
 @media (min-width:768px) {
     .flexbox-search-dropdown{
@@ -401,8 +409,15 @@ ul li{
         font-size: 1rem;
     }
 
-}
+    .signout{
+        margin-left: 480px;
+        position: absolute;
+    }
+    footer{
+        position: sticky;
+    } 
 
+}
 
 @media (min-width:992px) {
     .author {
@@ -424,6 +439,10 @@ ul li{
         font-family: 'Goudy Bookletter 1911', serif;
         display: block; 
     }
+    .signout{
+        margin-left: 720px;
+        position: absolute;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -437,5 +456,11 @@ ul li{
         width:25rem; 
         height: 40rem;
     }
+
+    .signout{
+        margin-left: 900px;
+        position: absolute;
+    }
+    
 }
 
