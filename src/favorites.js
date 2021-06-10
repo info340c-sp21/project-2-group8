@@ -14,12 +14,10 @@ export function CreateFavPage(props) {
 }
 
 function CreateCardList(props) {
-    if (props.card == []) {
+    if (props.cardsList.length == 0) {
         return (
-        <div className="container">
-            <div className="row">
-                <p>"Results Not Found"</p>
-            </div>
+        <div>
+                <p className='alert'>No Favorite Anime Yet</p>
          </div>
         )
     }

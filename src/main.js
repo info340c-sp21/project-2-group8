@@ -279,9 +279,10 @@ function RandomCard(random) {
 }
 {/* <CreateRandomCardList random={resultNew} adoptCallback={random.adoptCallback} randomCallback={random.randomCallback} currentUser={random.currentUser}/> */}
 
-
 function RandomComponents(random) {
     const [resultNew, setResultNew] = useState("");
+    const[Id, setId]=useState(undefined);
+
     let cardsList = random.random.cardsList;
     const [filterVal, setFilterVal] = useState("");
     const filter = (e) => {
@@ -331,6 +332,10 @@ function RandomComponents(random) {
             result = freakList[num];
         }
         // console.log(result);
+        let realId = result.id-1;
+        setId(realId)
+
+        
         setResultNew(result);
         // singleCard = <CreateCardList random={result}/>
         
@@ -355,7 +360,7 @@ function RandomComponents(random) {
                 </div>
                 <button className="button-dropdown randomBtn" onClick={() => generate()}>Generate</button>
             </main>
-            <CreateRandomCardList random={resultNew} adoptCallback={random.adoptCallback} randomCallback={random.randomCallback} currentUser={random.currentUser}/> 
+            <CreateRandomCardList random={random.random.cardsList[Id]} adoptCallback={random.adoptCallback} randomCallback={random.randomCallback} currentUser={random.currentUser}/> 
             {/* {singleCard} */}
         </div>
     )
@@ -368,6 +373,9 @@ function CreateRandomCardList(result) {
     // let createCards = random.random.cardsList.map((card) => {
     //     return <CreateCard card={card} key={card.title}/>
     // })
+    if(result.random === undefined) {
+        return <p className='alert'>Start Generating!</p >
+    }
     if (result.random.length === 0) {
         return <p className='alert'>Start Generating!</p >
 
