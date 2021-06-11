@@ -1,12 +1,14 @@
 import { Link, Redirect, NavLink, useParams } from "react-router-dom";
 import { React } from 'react';
 import firebase from 'firebase';
+import data from './data.json';
 
 export function CreateSpecPage(idCard) {
     return (
         <div>
             <Header />
-            <SpecMain id={idCard.id} singleCard={idCard.singleCard} />
+            {/* <SpecMain id={idCard.id} singleCard={idCard.singleCard} /> */}
+            <SpecMain id={idCard.id} singleCard={data} />
             <Footer />
         </div>
     )
@@ -24,21 +26,12 @@ export function Header() {
                     <h1><Link className="reactButton" to={'/'}>ANIWE</Link>  </h1>
                 </button>
                 <button className="signout" onClick={handleSignOut}>Sign Out</button>
-                {/* <ul className="list-unstyled" id="nav"> */}
 
                 <NavLink exact to='/favorites' className="favoriteNav">Favorites</NavLink>
                 <NavLink exact to='/random' className="randomNav">Random</NavLink>
 
-                {/* </ul> */}
-
-
-
-
                 <h2>Start searching for your anime!</h2>
             </div>
-
-
-
         </header>
     )
 }

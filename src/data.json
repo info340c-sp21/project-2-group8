@@ -1,0 +1,570 @@
+[
+   {
+    "id": 1,
+        "title": "Demon Slayer: Kimetsu no Yaiba",
+        "airDate": "2019",
+        "genre": ["Drama", "Action", "Adventure"," Dark Fantasy"],
+        "genreString": "Drama, Action, Adventure, Dark Fantasy",
+        "recommendedString": "Beginners/ Anime Fans",
+        "recommended": ["Beginners", "Anime Fans"],
+        "description": "The anime is set in the Taisho period (1912-1926) in Japan where demons exist with human beings. The main character Tanjiro Kamado finds his family is killed by the attack of demons and only his sister Nezuko is changed into a demon. He decides to become a demon slayer to restore her to a human.",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BZjZjNzI5MDctY2Y4YS00NmM4LTljMmItZTFkOTExNGI3ODRhXkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_UY1200_CR115,0,630,1200_AL_.jpg",
+        "watchOn": [
+            {
+                "source": "Netflix",
+                "link": "https://www.netflix.com/title/81091393"         
+            }
+        ]
+    }, 
+
+    {
+        "id": 2,
+        "title": "Naruto",
+        "airDate": "2002-2017",
+        "genre": ["Action", "Adventure", "Fantasy"],
+        "genreString": "Action, Adventure, Fantasy",
+        "recommendedString": "Beginners/ Anime Fans",
+        "recommended": ["Beginners", "Anime Fans"],
+        "description": "The setting of Naruto is the fictional world of Shinobi (Ninja), and the ineffective boy Naruto is growing by the help of many friends and masters there. Naruto and other Ninja characters battle with various Ninja techniques using the chakra energy.",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BZmQ5NGFiNWEtMmMyMC00MDdiLTg4YjktOGY5Yzc2MDUxMTE1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Ep-102-My-Name-Konohamaru/dp/B0759YQHMN/ref=as_li_ss_tl?dchild=1&keywords=Naturo&qid=1589796694&s=instant-video&sr=1-1&linkCode=sl1&tag=japanwebmagaz-20&linkId=a7fa7380262f3cced1f13dd56aee4fbd&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 3,
+        "title": "Clannad",
+        "airDate": "2007-2009",
+        "genre": ["Drama", "Slice of life"],
+        "genreString": "Drama, Slice of life",
+        "recommendedString": "Beginners/ Anime Fans/ Anime Freaks",
+        "recommended": ["Beginners", "Anime Fans", "Anime Freaks"],
+        "description": "There are two parts in the anime: Clannad in 2007-2008 and Clannad After Story in 2008-2009. The story follows the daily life of the main character Tomoya and the heroine Nagisa in the high school. It reaches the climax in the second half of the anime, and touching episodes move you. It is totally worth spending the amount of time for 44 main episodes.",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BN2VmM2NmMGUtOGQ2OC00Y2ZjLTljNTctYjhmMDJjZjM1NTY3XkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR160,0,630,1200_AL_.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Clannad-Hillside-Cherry-Blossoms-Flutter/dp/B008P95FIK/ref=as_li_ss_tl?dchild=1&keywords=Clannad&qid=1589796552&s=instant-video&sr=1-2&linkCode=sl1&tag=japanwebmagaz-20&linkId=02c12ec6a00ad763d84c3e147a07a598&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 4,
+        "title": "Monogatari Series",
+        "airDate": "2009",
+        "genre": ["Fantasy",  "Comedy", "Slice of life"], 
+        "genreString": "Fantasy, Comedy, Slice of life",
+        "recommendedString": "Anime Freaks",
+        "recommended": ["Anime Freaks"],
+        "description": "Koyomi Araragi handles with lots of problems arising apparitions called Kaii in Japanese. The apparitions (like supernatural ghost) have influence on the characters, and he saves them. There are mainly 5 seasons of the novel and 3 of them have been adapted into an anime. In an interview, the director Akiyuki Shinbo said that he would like to continue producing the rest of the seasons as long as the original novel is being published.",
+        "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/71MYAESZpEL._SL1000_.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Hitagi-Crab-Part-1/dp/B06XP34Y5F/ref=as_li_ss_tl?dchild=1&keywords=bakeMonogatari&qid=1589796489&s=instant-video&sr=1-1&linkCode=sl1&tag=japanwebmagaz-20&linkId=93efa78d768a588205c75c5b1919561d&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 5,
+        "title": "One Piece",
+        "airDate": "1999",
+        "genre": ["Adventure", "Action", "Fantasy", "Drama"], 
+        "genreString": "Adventure, Action, Fantasy, Drama",
+        "recommendedString": "Beginners/ Anime Fans",
+        "recommended": ["Beginners", "Anime Fans"],
+        "description": "It proceeds with the adventures of the main character Monkey D. Luffy and his crews in the pirates world. He sets sail on the sea in search of the ultimate treasure called “One Piece”. There are Devil Fruits in the world of One Piece, which grant a superpower to those who eat one while the fruits unable them to swim. Powerful fight scenes between the Devil Fruits eaters including Luffy are stunning.",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/gp/video/detail/B07J2SDXDL/ref=as_li_ss_tl?ie=UTF8&linkCode=sl1&tag=japanwebmagaz-20&linkId=19778eafe597e66b63a7e5703bf9167b&language=en_US"         
+            },
+            {
+                "source": "Netflix",
+                "link": "https://www.netflix.com/title/80107103"         
+            }
+        ]   
+    },
+
+    {
+        "id": 6,
+        "title": "Neon Genesis Evangelion",
+        "airDate": "1995-1996",
+        "genre": ["Mecha", "Action", "Fantasy"], 
+        "genreString": "Mecha, Action, Fantasy",
+        "recommendedString": "Beginners/ Anime Fans",
+        "recommended": ["Beginners", "Anime Fans"],
+        "description": "Neon Genesis EVANGELION (新世紀エヴァンゲリオン), directed by Hideaki Anno, is worldly known as one of the symbols of Japanese anime in 1990s. The famous mecha anime mainly depicts the story of the 4 teenagers: Shinji Ikari, Rei Ayanami, Asuka Langley Soryu and Kaworu Nagisa. They fight with the enemies called Angels by piloting the giant humanoid robot Evangelions.",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BYjY1Y2ZmNDctZWQ3Yy00MTE3LTk2M2QtMjQ0MDA5ODVjMDEyXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY1200_CR93,0,630,1200_AL_.jpg",
+        "watchOn": [
+            {
+                "source": "Netflix",
+                "link": "https://www.netflix.com/title/81033445"         
+            }
+        ]   
+    },
+
+    {
+        "id": 7,
+        "title": "JoJo’s Bizarre Adventure",
+        "airDate": "2012",
+        "genre": ["Adventure", "Action", "Fantasy"], 
+        "genreString": "Adventure, Action, Fantasy",
+        "recommendedString": "Anime Fans/ Anime Freaks",
+        "recommended": ["Anime Fans", "Anime Freaks"],
+        "description": "The stories focus on the mysterious adventures of the Joestar family. A main character varies by the part, but they all are the Joestar family. Unique characters and intense battle scenes are highlights of the anime.",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BZDc3NGQ3ZWQtYjNkOC00MjhiLTg2N2YtNmZlOGNiZTFkOWNhXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_UY1200_CR105,0,630,1200_AL_.jpg",
+        "watchOn": [
+            {
+                "source": "Netflix",
+                "link": "https://www.netflix.com/title/80179831"         
+            },
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Dio-the-Invader/dp/B012ICDDSI/ref=as_li_ss_tl?dchild=1&keywords=JoJo%E2%80%99s+Bizarre+Adventure&qid=1589796166&s=instant-video&sr=1-3&linkCode=sl1&tag=japanwebmagaz-20&linkId=e7d001e714f256836224263c653a3d0f&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 8,
+        "title": "Re:Zero -Starting Life in Another World-",
+        "airDate": "2016",
+        "genre": ["Isekai", "Adventure", "Dark Fantasy", "Time loop"], 
+        "genreString": "Isekai, Adventure, Dark Fantasy, Time loop",
+        "recommendedString": "Anime Fans/ Anime Freaks",
+        "recommended": ["Anime Fans", "Anime Freaks"],
+        "description": "The season 2 of Re:Zero was broadcasted with 25 episodes in 2020 and 2021. The main character Subaru is sent to Isekai (another world) with no superpower except a certain ability. The story proceeds with the encounter with the heroine Emilia.",
+        "imgSrc": "https://pm1.narvii.com/6351/48bd631d2ddd2f68beb82e6fc2f6a44a85e12eaa_hq.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Demonically-Inspired-Methods/dp/B07DGJL9B2/ref=as_li_ss_tl?dchild=1&keywords=Re:Zero&qid=1589796083&s=instant-video&sr=1-1&linkCode=sl1&tag=japanwebmagaz-20&linkId=03917e577ca76a6be2f6c488fecd6688&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 9,
+        "title": "Pokémon",
+        "airDate": "1997",
+        "genre": ["Kids", "Family", "Adventure"], 
+        "genreString": "Kids, Family, Adventure",
+        "recommendedString": "Beginners",
+        "recommended": ["Beginners"],
+        "description": "The young boy Satoshi travels all over the world with various Pokemon like Pikachu to become a Pokemon master.",
+        "imgSrc": "https://cultureposters.com/wp-content/uploads/2019/11/pokemon.jpg",
+        "watchOn": [
+            {
+                "source": "Netflix",
+                "link": "https://www.netflix.com/title/70297439"         
+            },
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Pok%C3%A9mon-I-Choose-You/dp/B01BT5MG9W/ref=as_li_ss_tl?dchild=1&keywords=Pok%C3%A9mon:+Adventures+i&qid=1589796011&s=instant-video&sr=1-4&linkCode=sl1&tag=japanwebmagaz-20&linkId=a94b3acccb6c3dc3190b9d03d77279a6&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 10,
+        "title": "Death Note",
+        "airDate": "2006-2007",
+        "genre": ["Mystery"], 
+        "genreString": "Mystery",
+        "recommendedString": "Beginners/ Anime Fans",
+        "recommended": ["Beginners", "Anime Fans"],
+        "description": "The protagonist Light Yagami finds a Death Note which makes people die if their names are written on the note. You can enjoy watching of the high-level game of wits.",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BODkzMjhjYTQtYmQyOS00NmZlLTg3Y2UtYjkzN2JkNmRjY2FhXkEyXkFqcGdeQXVyNTM4MDQ5MDc@._V1_UY1200_CR99,0,630,1200_AL_.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Rebirth/dp/B0011UIVDG/ref=as_li_ss_tl?dchild=1&keywords=Death+Note&qid=1589795880&s=instant-video&sr=1-1&linkCode=sl1&tag=japanwebmagaz-20&linkId=12538575e05294063d5898e91c214fdb&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 11,
+        "title": "Dragon Ball",
+        "airDate": "1984",
+        "genre": ["Action", "Adventure"],
+        "genreString": "Action, Adventure",
+        "recommendedString": "Beginners",
+        "recommended": ["Beginners"],
+        "description": "Many anime fans associate the most famous action anime with Dragon Ball, which started to be aired in 1984. Dragon Ball is originally made as the Weekly Shonen Jump manga by Akira Toriyama. There are several main parts in the Dragon Ball series, and it is ongoing as the new title Dragon Ball Super from 2015.",
+        "imgSrc": "https://image.api.playstation.com/vulcan/img/cfn/113077iOoRboPVZC24UITJfLs8Daca0hvKSMMC5cXx7Z7o4MKxRMaNuqV7-zrZZIsqdI77PZPsIOe4w8o2gOyOp9xcsHm0i4.png",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://amzn.to/2LGBvWI"   
+            }
+        ]
+    },
+
+    {
+        "id": 12,
+        "title": "Ghost in the Shell",
+        "airDate": "2002",
+        "genre": ["Science Fiction", "Cyberpunk"],
+        "genreString": "Science Fiction, Cyberpunk",
+        "recommendedString": "Anime Freaks",
+        "recommended": ["Anime Freaks"],
+        "description": "The setting of the anime is Japan in the parallel world after 2030 where the science technology is highly developed. In this anime, Public Security Section 9 including the main member Major Motoko Kusanagi works to prevent crimes.",
+        "imgSrc": "https://musicart.xboxlive.com/7/85705100-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://amzn.to/3g2jMXK"   
+            }
+        ]
+    },
+
+    {
+        "id": 13,
+        "title": "Love Live!",
+        "airDate": "2013",
+        "genre": ["Slice of life", "Comedy"],
+        "genreString": "Slice of life, Comedy",
+        "recommendedString": "Beginners",
+        "recommended": ["Beginners"],
+        "description": "An idol, which means Japanese pop singer groups in Japanese, is now a very popular theme of anime, and Love Live! is the most famous and first anime that assured the establishment of the theme. Love Live! focuses on the process of how the high school idol group named μ’s (pronounced “muse”) grows, and Aqours is featured in Love Live! Sunshine!!.",
+        "imgSrc": "https://i.pinimg.com/originals/74/c2/b7/74c2b70c78ac18413396278ca09676bb.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://amzn.to/2zPgqqs"   
+            }
+        ]
+    },
+
+    {
+        "id": 14,
+        "title": "Anohana: The Flower We Saw That Day",
+        "airDate": "2011",
+        "genre": ["Drama"],
+        "genreString": "Drama",
+        "recommendedString": "Anime Fans",
+        "recommended": ["Anime Fans"],
+        "description": "Anohana: The Flower We Saw That Day, which is also called just Anohana, is one of the most heartwarming anime in Japan. Its story begins with this plot: Jinta Yadomi, whose nickname is Jintan, plays video games instead of attending high school. One day in summer, his childhood friend Meiko Homma (Menma) shows up before Jintan as a ghost though she died in an accident years before. ",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BYmQ5Y2RiOTAtMzg2Ni00MzE0LWE0NTItNzExNmMzOGQyY2NjL2ltYWdlXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_UY1200_CR85,0,630,1200_AL_.jpg",
+        "watchOn": [
+            {
+                "source": "Crunchyroll",
+                "link": "https://www.crunchyroll.com/anohana-the-flower-we-saw-that-day"   
+            },
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://amzn.to/2LC9j7J"   
+            }
+        ]
+    },
+
+    {
+        "id": 15,
+        "title": "Fullmetal Alchemist",
+        "airDate": "2003-2010",
+        "genre": ["Adventure", "Science Fiction", "Dark Fantasy"],
+        "genreString": "Adventure, Science Fiction, Dark Fantasy",
+        "recommendedString": "Beginners/ Anime Fans",
+        "recommended": ["Beginners", "Anime Fans"],
+        "description": "Fullmetal Alchemist, which is abbreviated to Hagaren in Japanese, is a well-known Japanese sci-fi anime worldwide. The brother Edward and Alphonse loses a part or the whole of their body by violating a taboo, and they start traveling to find the way to retrieve their bodies. ",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BZmEzN2YzOTItMDI5MS00MGU4LWI1NWQtOTg5ZThhNGQwYTEzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY1200_CR113,0,630,1200_AL_.jpg",
+        "watchOn": [
+            {
+                "source": "Netflix",
+                "link": "https://www.netflix.com/title/70204981"   
+            },
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://amzn.to/2WGOSwL"   
+            }
+        ]
+    },
+
+    {
+        "id": 16,
+        "title": "Attack on Titan",
+        "airDate": "2013-2022",
+        "genre": ["Action", "Fantasy"],
+        "genreString": "Action, Fantasy",
+        "recommendedString": "Beginners/ Anime Fans",
+        "recommended": ["Beginners", "Anime Fans"],
+        "description": "As one of the best action anime in recent years, Attack on Titan should be listed. In the story, humanity stands on the edge of extinction for being attacked by the titans. The main characters Eren Yeager and Mikasa Ackerman with the other Survey Corps members battle against the titans.",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BMTY5ODk1NzUyMl5BMl5BanBnXkFtZTgwMjUyNzEyMTE@._V1_.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://amzn.to/2Xd6tLQ"   
+            }
+        ]
+    },
+
+    {
+        "id": 17,
+        "title": "Violet Evergarden",
+        "airDate": "2018",
+        "genre": ["Drama"],
+        "genreString": "Drama",
+        "recommendedString": "Anime Fans",
+        "recommended": ["Anime Fans"],
+        "description": "The famous Japanese animation studio Kyoto Animation released the quality anime Violet Evergarden in 2018, which is based on the light novel with 3 volumes. The life of the girl Violet who works writing for others as Auto Memory Dolls is depicted with the beautifully-drawn pictures in this anime.",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BZmUzMThjOTItZGY4ZS00ODcwLTliNTMtYjVkM2JmY2QxNmRhXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_UY1200_CR93,0,630,1200_AL_.jpg",
+        "watchOn": [
+            {
+                "source": "Netflix",
+                "link": "https://www.netflix.com/title/80182123"   
+            }
+        ]
+    },
+
+    {
+        "id": 18,
+        "title": "Laid-Back Camp",
+        "airDate": "2018",
+        "genre": ["Slice of life", "Comedy"],
+        "genreString": "Slice of life, Comedy",
+        "recommendedString": "Anime Fans",
+        "recommended": ["Anime Fans"],
+        "description": "Laid-Back Capm (ゆるきゃん△), which is known as Yurukyan in Japanese, was aired on TV in 2018, which is now one of the most popular modern anime in these several years. The five high school girls including Rin and Nadeshiko, who have each unique personality, purely enjoy camping around Mt.Fuji. The characters visit the camping sites that are inspired by the real places in Japan where many fans go camping after broadcasting the first season.",
+        "imgSrc": "https://somoskudasai.com/wp-content/uploads/2020/12/Eo2Arj3U0AAEras.jpg",
+        "watchOn": [
+            {
+                "source": "Crunchyroll",
+                "link": "https://www.crunchyroll.com/laid-back-camp"   
+            },
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://amzn.to/2LEblEo"   
+            }
+        ]
+    },
+    
+    {
+        "id": 19,
+        "title": "Detective Conan",
+        "airDate": "1996",
+        "genre": ["Mystery"],
+        "genreString": "Mystery",
+        "recommendedString": "Anime Fans",
+        "recommended": ["Anime Fans"],
+        "description": "Detective Conan, which is also known as Case Closed, is a popular ongoing detective anime while the original manga has been published on the Weekly Shonen Sunday since 1994. The high school detective Shinichi Kudo is transformed into a kid by a poison named APTX-4869, and he identifies himself as Conan Edogawa to hide his true identity from the opposite Black Organization.",
+        "imgSrc": "https://cdn.animeschedule.net/production/assets/public/img/anime/default/detective-conan-11d2637275.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://amzn.to/2z5CgGc"   
+            }
+        ]
+    },
+
+    {
+        "id": 20,
+        "title": "The Melancholy of Haruhi Suzumiya",
+        "airDate": "2006-2009",
+        "genre": ["Sekaikei", "Slice of life", "Comedy", "Science Fiction", "Time loop"],
+        "genreString": "Sekaikei, Slice of life, Comedy, Science Fiction, Time loop",
+        "recommendedString": "Beginners/ Anime Fans",
+        "recommended": ["Beginners", "Anime Fans"],
+        "description": "The slice-of-life anime The Melancholy of Haruhi Suzumiya is one of the best anime after 2000s. It is initially published as a light novel in 2003, which was adapted into anime in 2006. The anime represent the daily life of SOS Brigade which is the school club established by the main heroine Haruhi Suzumiya. But, she is not just a human…",
+        "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/71kyKrRdY8L._SL1403_.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://amzn.to/2WEQ8Ag"   
+            }
+        ]
+    },
+
+    {
+        "id": 21,
+        "title": "OreGairu: My Teen Romantic Comedy SNAFU",
+        "airDate": "2013-2020",
+        "genre": ["Slice of life", "Romance", "Comedy"],
+        "genreString": "Slice of life, Romance, Comedy",
+        "recommendedString": "Anime Fans/ Anime Freaks",
+        "recommended": ["Anime Fans", "Anime Freaks"],
+        "description": "The slice-of-life anime is made into from the light novel that completed with the 17th volume in 2019. The cynical and pessimistic character Hachiman Hikigaya starts offering help and advice to other students in the school service club with two heroines: Yukino Yukinoshita and Yui Yuigahama.",
+        "imgSrc": "https://cdn.myanimelist.net/images/anime/1958/107912.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Youth-Romantic-Comedy-Wrong-Expected/dp/B01MT6JL3C/ref=as_li_ss_tl?dchild=1&keywords=My+Teen+Romantic+Comedy+SNAFU&qid=1589794785&s=instant-video&sr=1-1&linkCode=sl1&tag=japanwebmagaz-20&linkId=c08129a6cd8d65e0f49ffe9034ff243b&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 22,
+        "title": "Tokyo Ghoul",
+        "airDate": "2014-2018",
+        "genre": ["Dark Fantasy"],
+        "genreString": "Dark Fantasy",
+        "recommendedString": "Anime Fans/ Anime Freaks",
+        "recommended": ["Anime Fans", "Anime Freaks"],
+        "description": "The anime focuses on the theme of Ghouls, which live in the human society looking like a normal human. However, the ghouls subsist on human flesh as food.",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BN2E2OTgzODktMjBhYy00MjJjLWI0OTgtNGYxOGNhMWMxOWE4XkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_UY1200_CR109,0,630,1200_AL_.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Ghoul/dp/B015O6ONUC/ref=as_li_ss_tl?dchild=1&keywords=Tokyo+Ghoul&qid=1589794711&s=instant-video&sr=1-1&linkCode=sl1&tag=japanwebmagaz-20&linkId=d998f24a95cc2279b2304e9b09b4511d&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 23,
+        "title": "Steins;Gate",
+        "airDate": "2011-2018",
+        "genre": ["Science Fiction", "Time loop"],
+        "genreString": "Science Fiction, Time loop",
+        "recommendedString": "Anime Fans/ Anime Freaks",
+        "recommended": ["Anime Fans", "Anime Freaks"],
+        "description": "The main character Rintaro Okabe and other Future Gadget Laboratory members try to invent a kind of time machine, and the anime is known for its time loop plot. Many fans of Steins;Gate visit the town of the setting: Akihabara, Tokyo.",
+        "imgSrc": "https://m.media-amazon.com/images/M/MV5BMjUxMzE4ZDctODNjMS00MzIwLThjNDktODkwYjc5YWU0MDc0XkEyXkFqcGdeQXVyNjc3OTE4Nzk@._V1_UY1200_CR85,0,630,1200_AL_.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Turning-Point/dp/B00N5CONT4/ref=as_li_ss_tl?dchild=1&keywords=Steins;Gate&qid=1589794683&s=instant-video&sr=1-1&linkCode=sl1&tag=japanwebmagaz-20&linkId=3384f3e321b43d4369d2dfe5d52cddfb&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 24,
+        "title": "My Hero Academia",
+        "airDate": "2016",
+        "genre": ["Action", "Fantasy"],
+        "genreString": "Action, Fantasy",
+        "recommendedString": "Beginners",
+        "recommended": ["Beginners"],
+        "description": "A young boy Izuku Midoriya and other Heros fights the Villains using their superpowers Quirks. My Hero Academia is also popular among international anime fans since the touch and atmosphere in the anime look like an American Superhero comic rather than Japanese anime.",
+        "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/81chNo+roXL.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Izuku-Midoriya-Origin/dp/B06Y48VPV5/ref=as_li_ss_tl?dchild=1&keywords=My+Hero+Academia&qid=1589794461&s=instant-video&sr=1-2&linkCode=sl1&tag=japanwebmagaz-20&linkId=e24d7cec2c333eb9bc948c7b2c6c0684&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 25,
+        "title": "Code Geass",
+        "airDate": "2006",
+        "genre": ["Dark Fantasy", "Mecha"],
+        "genreString": "Dark Fantasy, Mecha",
+        "recommendedString": "Anime Fans",
+        "recommended": ["Anime Fans"],
+        "description": " The protagonist of the anime series Lelouch vi Britannia stands out in opposition to the gigantic the the Holy Britannian Empire after granted the supernatural power named Geass.",
+        "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/91MiUm9dUaL._RI_.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/dp/B01LY6W58B/ref=as_li_ss_tl?dchild=1&keywords=Code+Geass&qid=1589794376&s=instant-video&sr=1-4&linkCode=sl1&tag=japanwebmagaz-20&linkId=c0603cefcd245c38c6c95fec74068900&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 26,
+        "title": "Yu-Gi-Oh!",
+        "airDate": "1998",
+        "genre": ["Fantasy"],
+        "genreString": "Fantasy",
+        "recommendedString": "Anime Fans",
+        "recommended": ["Anime Fans"],
+        "description": "The symbol of the anime is the trading card game Yu-Gi-Oh! Duel Monsters, which has been played worldwide since then. The second season of the anime series Yu-Gi-Oh! Duel Monsters released in 2000 popularized the card game and the anime itself, and the new series is still ongoing.",
+        "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/81nKb5FnlcL._SL1500_.jpg",
+        "watchOn": [
+            {
+                "source": "Netflix",
+                "link": "https://www.netflix.com/title/70177034"   
+            },
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/gp/video/detail/B0793SKX65/ref=as_li_ss_tl?ie=UTF8&linkCode=sl1&tag=japanwebmagaz-20&linkId=f54f0a1e133fbcf7a88debde112e2a2b&language=en_US"   
+            }
+        ]   
+    },
+
+    {
+        "id": 27,
+        "title": "Cowboy Bebop",
+        "airDate": "1998-1999",
+        "genre": ["Action", "Science Fiction"],
+        "genreString": "Action, Science Fiction",
+        "recommendedString": "Beginners/ Anime Fans",
+        "recommended": ["Beginners", "Anime Fans"],
+        "description": "The setting of Cowboy Bebop is the space in 2071 where the bounty hunter Spike Spiegel and his partner Jet Black chase criminals. The anime film Cowboy Bebop: Knockin’ on Heaven’s Door was released in 2001.",
+        "imgSrc": "https://i.pinimg.com/736x/c1/ea/f2/c1eaf24f64dc71ea7ae0149f59be9a5c.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Session-1-Asteroid-Blues/dp/B00R2KKBLY/ref=as_li_ss_tl?dchild=1&keywords=Cowboy+Bebop&qid=1589793983&s=instant-video&sr=1-1&linkCode=sl1&tag=japanwebmagaz-20&linkId=a1469f92f6f1844e7e1409ec7f9ea994&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 28,
+        "title": "Inuyasha",
+        "airDate": "2000",
+        "genre": ["Adventure", "Fantasy", "Action"],
+        "genreString": "Adventure, Fantasy, Action",
+        "recommendedString": "Anime Fans/ Anime Freaks",
+        "recommended": ["Anime Fans", "Anime Freaks"],
+        "description": "A 15 years old girl Kagome transported to another world in the past meets the half dog-demon named Inuyasha. Kagome and Inuyasya with their party travel to complete the Shikon Jewel, which enables someone’s wish to be realized.",
+        "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/91vIFa5wMkL._SL1500_.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/Inuyasha-Season-1/dp/B00JL2EH9I/ref=as_li_ss_tl?_encoding=UTF8&pd_rd_i=B00JL2EH9I&pd_rd_r=e95df5ac-0b8c-4150-a801-03ec6e8bfda7&pd_rd_w=Wsmlz&pd_rd_wg=SPGB3&pf_rd_p=2c2d0d3b-b3c5-4110-93fa-2c1270309ac1&pf_rd_r=2HA9T4C3FQ82Y0TYMSCX&psc=1&refRID=2HA9T4C3FQ82Y0TYMSCX&linkCode=sl1&tag=japanwebmagaz-20&linkId=a2a27d0f5b0788d832d0f52d24ab333e&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 29,
+        "title": "KonoSuba: God’s Blessing on this Wonderful World!",
+        "airDate": "2016",
+        "genre": ["Isekai", "Comedy"],
+        "genreString": "Isekai, Comedy",
+        "recommendedString": "Anime Fans/ Anime Freaks",
+        "recommended": ["Anime Fans", "Anime Freaks"],
+        "description": "The first season of KonoSuba was released in 2016 and the second one in 2017. The story starts after a teenager Kazuma died in an accident and was sent to another world with the goddess Aqua.",
+        "imgSrc": "https://upload.wikimedia.org/wikipedia/en/6/66/KonoSuba_film_poster.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.co.jp/%E3%81%93%E3%81%AE%E4%B8%AD%E4%BA%8C%E7%97%85%E3%81%AB%E7%88%86%E7%84%94%E3%82%92%EF%BC%81/dp/B06W576689/ref=as_li_ss_tl?dchild=1&keywords=KonoSuba&qid=1589354627&sr=8-2&linkCode=sl1&tag=japanwebmag09-22&linkId=b616e10373956a8c8c2615c37f12c4c4&language=en_US"         
+            }
+        ]   
+    },
+
+    {
+        "id": 30,
+        "title": "Fate",
+        "airDate": "2006",
+        "genre": ["Fantasy", "Action"],
+        "genreString": "Fantasy, Action",
+        "recommendedString": "Anime Fans",
+        "recommended": ["Anime Fans"],
+        "description": "Fate/stay night, based on the game for Windows, was released as the first season of the Fate Series in 2006, followed by the past story Fate/Zero in 2011-2012. The main character Shiro Emiya survives the Holy Grail War with his servant Saber. The new series Fate/Grand Order – Absolute Demonic Battlefront: Babylonia was aired on TV from 2019.",
+        "imgSrc": "https://upload.wikimedia.org/wikipedia/en/d/d4/Fate-stay_night.jpg",
+        "watchOn": [
+            {
+                "source": "Amazon Prime Video",
+                "link": "https://www.amazon.com/The-Day-It-Began/dp/B00VGYL1WA/ref=as_li_ss_tl?dchild=1&keywords=Fate/stay+night&qid=1589793243&sr=8-2&linkCode=sl1&tag=japanwebmagaz-20&linkId=e64137168362400ce4b962ae48829413&language=en_US"         
+            }
+        ]   
+    }
+
+]
