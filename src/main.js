@@ -101,8 +101,8 @@ export function CreateMainPage(props) {
         className='load' 
       />
             {/* <Switch> */}
-            <Route exact path='/spec' exact={true} render={() => (
-                <CreateSpecPage id={idCard} />
+            <Route path='/spec/:id' render={(props) => ( 
+                <CreateSpecPage {...props} id={idCard} singleCard={cards}/>
             )} />
             <Route path='/' exact={true} render={() => <CreateMainPageTest cardsList={cards} adoptCallback={handleAdopt} searchCallBack={renderSearch} clearCallback={clearCards} randomCallback={randomCard} currentUser={props.currentUser} />} />
             {/* </Switch> */}
@@ -225,7 +225,7 @@ export function CreateCard(props) {
                             <p className="card-text">{"Genre: " + props.card.genreString} </p>
                             <p className="card-text">{"Recommended for: " + props.card.recommendedString} </p>
                             <button className="btn" id="see_more">
-                                <Link className="reactButton" to={'/spec'} onClick={handleClick}>See More</Link>
+                            <Link className="reactButton" to={'/spec/'+props.card.id} onClick={handleClick}>See More</Link>
                             </button>
                             <FontAwesomeIcon icon={faHeart} aria-label="favorite button" className={(userFavorites ? "heartActive": "heart")} onClick={favoriteAnime}/>
                             <FontAwesomeIcon icon={faThumbsUp} aria-label="like button" className={(userLikes ? 'user-liked': 'thumb')} onClick={likeAnime}/><span>{/*space*/} {likeCount}</span>

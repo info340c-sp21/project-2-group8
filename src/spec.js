@@ -1,14 +1,13 @@
-import { Link, Redirect, NavLink} from "react-router-dom";
-import { React, useState } from 'react';
+import { Link, Redirect, NavLink, useParams} from "react-router-dom";
+import { React } from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 
-
 export function CreateSpecPage(idCard) {
-    return (
+    return (  
         <div>
             <Header />
-            <SpecMain id={idCard} />
+            <SpecMain id={idCard.id} singleCard={idCard.singleCard} />
             <Footer /> 
         </div>
     )
@@ -97,22 +96,36 @@ export function Header() {
 // }
 
 function SpecMain(idCard) {
-    if (idCard.length === 0) {
-        return (
-            <p>no result</p>
-        )
-    } else {
-        console.log(idCard)
-        let current = idCard.id.id[0];
-        if (current === undefined) {
+    const urlParams = useParams();
+    let cardId = urlParams.id-1;
+    // console.log(idCard);
+    // console.log(cardId);
+  
+    // console.log(idCard.singleCard)
+    
+
+
+    // if (idCard.length === 0) {
+    //     return (
+    //         <p>no result</p >
+    //     )
+    // } 
+    // else {
+        // console.log(idCard)
+        // let current = idCard.id.id[0];
+        
+        if (idCard.singleCard === undefined) {
             return (
                 <Redirect to='/' />
             )
         }
-        console.log(current)
+        console.log(idCard.id)
+        let current = idCard.singleCard[cardId];
+        console.log(current);
         let creatWebLinks = current.watchOn.map((item) => {
-            return <li key={item.source}><a href={item.link}>{item.source}</a></li>
+            return <li key={item.source}><a href={item.link}>{item.source}</a ></li>
         })
+
 
         return (
             <main className="index-main">
@@ -123,9 +136,9 @@ function SpecMain(idCard) {
 
                     <div className="discription-container-title">
                         <h2 className="anime-title">{current.title}</h2>
-                        <p className="discription-text">{current.description}</p>
-                        <p className="discription-text">{"Recommended for: " + current.recommendedString}</p>
-                        <p className="discription-text">Watch On:</p>
+                        <p className="discription-text">{current.description}</p >
+                        <p className="discription-text">{"Recommended for: " + current.recommendedString}</p >
+                        <p className="discription-text">Watch On:</p >
                         <ul>
                             {creatWebLinks}
                         </ul>
@@ -134,7 +147,61 @@ function SpecMain(idCard) {
             </main>
         )
 
-    }
+    // }
+    // let current = idCard.id.id[0];
+    // console.log(current)
+    // let creatWebLinks = current.watchOn.map((item) => {
+    //         return <li><a href={item.link}>{item.source}</a ></li>
+    // })
+
+    // return (
+    //     <main className="index-main">
+    //         <div className="flexbox-single-anime">
+    //             <div className="discription-container">
+    //                 < img className="poster" src={current.imgSrc} />
+    //             </div>
+
+    //             <div className="discription-container-title">
+    //                 <h2 className="anime-title">{current.title}</h2>
+    //                 <p className="discription-text">{current.description}</p >
+    //                 <p className="discription-text">{"Recommended for: " + current.recommendedString}</p >
+    //                 <p className="discription-text">Watch On:</p >
+    //                 <ul>
+    //                     {creatWebLinks}
+    //                 </ul>
+    //             </div>
+    //         </div>
+    //     </main>
+    // )
+}
+
+    // }
+    // let current = idCard.id.id[0];
+    // console.log(current)
+    // let creatWebLinks = current.watchOn.map((item) => {
+    //         return <li><a href={item.link}>{item.source}</a ></li>
+    // })
+
+    // return (
+    //     <main className="index-main">
+    //         <div className="flexbox-single-anime">
+    //             <div className="discription-container">
+    //                 < img className="poster" src={current.imgSrc} />
+    //             </div>
+
+    //             <div className="discription-container-title">
+    //                 <h2 className="anime-title">{current.title}</h2>
+    //                 <p className="discription-text">{current.description}</p >
+    //                 <p className="discription-text">{"Recommended for: " + current.recommendedString}</p >
+    //                 <p className="discription-text">Watch On:</p >
+    //                 <ul>
+    //                     {creatWebLinks}
+    //                 </ul>
+    //             </div>
+    //         </div>
+    //     </main>
+    // )
+
     // let current = idCard.id.id[0];
     // console.log(current)
     // let creatWebLinks = current.watchOn.map((item) => {
@@ -160,7 +227,7 @@ function SpecMain(idCard) {
     //         </div>
     //     </main>
     // )
-}
+
 
 export function Footer() {
     return (
