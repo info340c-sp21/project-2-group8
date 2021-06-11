@@ -80,7 +80,7 @@ export function CreateMainPage(props) {
         // let favId = props.card.id-1
         // let facDS = firebase.database().ref('cards').child(likeId +'/favorites');
         let updateFav = {};
-        if (card.favorites != undefined) {
+        if (card.favorites !== undefined) {
           updateFav = card.favorites;
         }
         if (updateFav.hasOwnProperty(props.currentUser.uid)) {
@@ -162,7 +162,7 @@ export function CreateCard(props) {
         let likeId = props.card.id-1
         let likeDS = firebase.database().ref('cards').child(likeId +'/likes');
         let updateLikes = {};
-        if (props.card.likes != undefined) {
+        if (props.card.likes !== undefined) {
           updateLikes = props.card.likes;
         }
         if (updateLikes.hasOwnProperty(props.currentUser.uid)) {
@@ -189,7 +189,7 @@ export function CreateCard(props) {
         let likeId = props.card.id-1
         let favoriteDS = firebase.database().ref('cards').child(likeId +'/favorites');
         let updateFavorites = {};
-        if (props.card.favorites != undefined) {
+        if (props.card.favorites !== undefined) {
           updateFavorites = props.card.favorites;
         }
         if (updateFavorites.hasOwnProperty(props.currentUser.uid)) {
