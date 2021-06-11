@@ -1,5 +1,4 @@
 import { Header } from './spec';
-// import React, { useState, useEffect } from 'react';
 import { Footer } from './spec';
 import {CreateCard} from './main'
 
@@ -17,7 +16,7 @@ export function CreateFavPage(props) {
 }
 
 function CreateCardList(props) {
-    if (props.cardsList.length == 0) {
+    if (props.cardsList.length === 0) {
         return (
         <div className='randomContainer'>
             <p className='alert'>No Favorite Anime Yet</p >
