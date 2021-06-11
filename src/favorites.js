@@ -7,7 +7,10 @@ export function CreateFavPage(props) {
     return  (
      <div className='sets'>
     <Header />
+    <div className='push'></div>
+
     <CreateCardList cardsList={props.cardsList} adoptCallback={props.adoptCallback} currentUser={props.currentUser}/>
+
     <Footer />
     </div>
     )
@@ -16,8 +19,8 @@ export function CreateFavPage(props) {
 function CreateCardList(props) {
     if (props.cardsList.length == 0) {
         return (
-        <div>
-                <p className='alert'>No Favorite Anime Yet</p>
+        <div className='randomContainer'>
+            <p className='alert'>No Favorite Anime Yet</p >
          </div>
         )
     }

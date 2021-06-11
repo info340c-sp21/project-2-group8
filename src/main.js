@@ -266,13 +266,13 @@ function CreateCardList(props) {
         </div>
     )
 }
-
 function RandomCard(random) { 
     
     return(
-        <div>
+        <div className='sets'>
             <Header />
             <RandomComponents random={random} adoptCallback={random.adoptCallback} searchCallBack={random.searchCallBack} clearCallback={random.clearCallback} randomCallback={random.randomCallback} currentUser={random.currentUser}/>
+            <Footer />
             
         </div>
     )
