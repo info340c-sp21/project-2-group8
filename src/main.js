@@ -326,9 +326,6 @@ function CreateRandomCardList(result) {
     }
     if (result.random.length === 0) {
         return <p className='alert'>Start Generating!</p >
-
-
-
     } else {
         return (
             <div className="container">
