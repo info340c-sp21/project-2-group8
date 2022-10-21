@@ -1,3 +1,1 @@
-# Project 1
-
-This repository contains code for an interactive information web app, created for the _Client-Side Web Development_ course at the UW iSchool.
+This website lists a number of most popular animes over the years and allows anime lovers to search for their favorite anime. It uses Firebase to store user and anime information. Logged in users have the ability to like or favorite any anime for future reference. This website also allows users to randomly generate animes based on 3 given lables: beginners, fans, and freaks. The hosted website can be found at: https://info340-project2-feb8f.web.app/random.
